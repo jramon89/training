@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const user  = ({name}) => {
 	return(
 		<li>
-			User
+			{name} <a href="#">Edit</a>&nbsp;<a href="#">Delete</a>
 		</li>
 	);
 }

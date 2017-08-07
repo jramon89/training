@@ -6,10 +6,15 @@ import {
     TOGGLE_TODO
 } from './actionTypes';
 
+let id = 0;
+
 export function addUser(user) {
     return {
         type: ADD_USER,
-        user
+        data: {
+            id: id++,
+            name: user
+        }
     }
 }
 
@@ -41,15 +46,15 @@ export function addTodo(text) {
 }
 
 export function setVisibilityFilter(filter) {
-	return {
-		type: SET_VISIBILITY_FILTER,
-		filter
-	}
+    return {
+        type: SET_VISIBILITY_FILTER,
+        filter
+    }
 }
 
-export function toggleTode(id) {
-	return {
-		type: TOGGLE_TODO,
-		id
-	}
+export function toggleTodo(id) {
+    return {
+        type: TOGGLE_TODO,
+        id
+    }
 }

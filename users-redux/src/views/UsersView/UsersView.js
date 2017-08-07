@@ -12,14 +12,14 @@ const usersView = ({data}) => {
 const mapStateToProps = function(state) {
 	console.log('state', state);
 	return {
-		data: state
+		data: state.users
 	}
 };
 
 const mapDispatchToProps = function(dispatch) {
 	return {
 		eventUser: function(){
-
+			
 		}
 	}
 };

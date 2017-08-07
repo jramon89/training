@@ -4,13 +4,17 @@ export default function(state=[], action) {
 	switch(action.type){
 		case ADD_USER:
 			return [
-				action.user,
+				...state,
+				action.data
 			];
 		case DELETE_USER:
-			return [
-
-			];
+			console.log('deleting', action)
+			const result = state.filter((v, i) => {
+				return v.id !== action.id;
+			})
+			return result;
 		case 'ok':
+			console.log('state from reducer', state)
 			return [
 				...state
 			];

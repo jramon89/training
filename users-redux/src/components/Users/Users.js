@@ -5,7 +5,17 @@ import User from './User';
 const users = ({users}) => {
 	return(
 		<ul>
-			<User name='JR'/>
+			{
+				users.map((v, i) => {
+					console.log('>>>>>', v);
+					return(
+						<User
+							key={i} 
+							name={v.name}/>
+					);
+				})
+				
+			}
 		</ul>
 	);
 }
